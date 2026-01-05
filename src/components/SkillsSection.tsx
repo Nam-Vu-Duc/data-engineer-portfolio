@@ -5,26 +5,32 @@ import { useRef } from "react";
 const skillCategories = [
   {
     title: "Programming Languages",
+    icon: "💻",
     skills: ["Python", "SQL", "Java", "Scala", "Go", "Bash"],
   },
   {
     title: "Big Data Technologies",
+    icon: "⚡",
     skills: ["Apache Spark", "Apache Kafka", "Hadoop", "Apache Flink", "Presto"],
   },
   {
     title: "Cloud Platforms",
+    icon: "☁️",
     skills: ["AWS (S3, EC2, Lambda, Glue, Athena, Redshift)", "GCP (BigQuery, Dataflow, Pub/Sub)", "Azure (Data Factory, Synapse)"],
   },
   {
     title: "Databases",
+    icon: "🗄️",
     skills: ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "DynamoDB", "Redis"],
   },
   {
     title: "Data Pipeline & Orchestration",
+    icon: "🔄",
     skills: ["Apache Airflow", "Prefect", "Dagster", "dbt", "Luigi"],
   },
   {
     title: "DevOps & Tools",
+    icon: "🛠️",
     skills: ["Git", "Docker", "Kubernetes", "Jenkins", "Terraform", "CI/CD"],
   },
 ];
@@ -34,24 +40,24 @@ export const SkillsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-24 bg-background">
+    <section id="skills" className="py-24 bg-card/30">
       <div className="container mx-auto px-6">
         <div ref={ref} className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            className="inline-block text-primary font-medium text-sm mb-4 uppercase tracking-wide"
+            className="inline-block text-primary font-mono text-sm mb-4"
           >
-            Expertise
+            {"<Skills />"}
           </motion.span>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold mb-4 text-foreground"
+            className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Technical <span className="text-gradient">Skills</span>
+            Technical <span className="text-gradient">Arsenal</span>
           </motion.h2>
           
           <motion.p
@@ -71,11 +77,14 @@ export const SkillsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * categoryIndex }}
-              className="bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 shadow-card hover:shadow-elevated"
+              className="bg-gradient-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 group"
             >
-              <h3 className="text-lg font-semibold text-foreground mb-5">
-                {category.title}
-              </h3>
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-2xl">{category.icon}</span>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {category.title}
+                </h3>
+              </div>
 
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
@@ -87,7 +96,7 @@ export const SkillsSection = () => {
                       duration: 0.3,
                       delay: 0.1 * categoryIndex + 0.05 * skillIndex,
                     }}
-                    className="px-3 py-1.5 bg-secondary border border-border rounded-lg text-sm text-muted-foreground hover:border-primary/30 hover:text-foreground transition-all duration-300"
+                    className="px-3 py-1.5 bg-secondary/50 border border-border rounded-lg text-sm text-muted-foreground group-hover:border-primary/30 group-hover:text-foreground transition-all duration-300"
                   >
                     {skill}
                   </motion.span>
@@ -105,7 +114,7 @@ export const SkillsSection = () => {
           className="mt-12 text-center"
         >
           <h3 className="text-lg font-semibold text-foreground mb-4">
-            Core Competencies
+            Soft Skills & Expertise
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
@@ -120,7 +129,7 @@ export const SkillsSection = () => {
             ].map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg text-sm text-primary font-medium hover:bg-primary/20 transition-colors"
+                className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-sm text-primary hover:bg-primary/20 transition-colors cursor-default"
               >
                 {skill}
               </span>
