@@ -16,9 +16,6 @@ export const AboutSection = () => {
 
   return (
     <section id="about" className="py-24 relative overflow-hidden">
-      {/* Background Accent */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
-      
       <div className="container mx-auto px-6">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Image & Stats */}
@@ -30,10 +27,9 @@ export const AboutSection = () => {
           >
             {/* Profile Image Container */}
             <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="aspect-square rounded-2xl bg-gradient-card border border-border overflow-hidden relative">
+              <div className="aspect-square rounded-2xl bg-gradient-card border border-border overflow-hidden relative shadow-elevated">
                 {/* Decorative Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-card to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
                 
                 {/* Profile Placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -41,26 +37,6 @@ export const AboutSection = () => {
                     <span className="text-6xl font-bold text-gradient">AC</span>
                   </div>
                 </div>
-
-                {/* Floating Code Blocks */}
-                <motion.div
-                  animate={{ y: [-10, 10, -10] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute top-8 right-8 bg-card/80 backdrop-blur-sm border border-border rounded-lg px-3 py-2 font-mono text-xs"
-                >
-                  <span className="text-primary">SELECT</span>
-                  <span className="text-muted-foreground"> * FROM</span>
-                  <span className="text-foreground"> data</span>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [10, -10, 10] }}
-                  transition={{ duration: 5, repeat: Infinity }}
-                  className="absolute bottom-16 left-8 bg-card/80 backdrop-blur-sm border border-border rounded-lg px-3 py-2 font-mono text-xs"
-                >
-                  <span className="text-primary">spark</span>
-                  <span className="text-muted-foreground">.read()</span>
-                </motion.div>
               </div>
 
               {/* Stats Grid */}
@@ -71,7 +47,7 @@ export const AboutSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                    className="bg-card border border-border rounded-xl p-4 hover:border-primary/50 transition-colors"
+                    className="bg-card border border-border rounded-xl p-4 hover:border-primary/50 transition-colors shadow-card"
                   >
                     <Icon className="w-5 h-5 text-primary mb-2" />
                     <div className="text-xl font-bold text-foreground">{label}</div>
@@ -88,11 +64,11 @@ export const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="inline-block text-primary font-mono text-sm mb-4">
-              {"<AboutMe />"}
+            <span className="inline-block text-primary font-medium text-sm mb-4 uppercase tracking-wide">
+              About Me
             </span>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Architecting Data
               <br />
               <span className="text-gradient">Infrastructure at Scale</span>
@@ -128,7 +104,7 @@ export const AboutSection = () => {
               {["ETL/ELT", "Real-time Streaming", "Data Modeling", "Cloud Architecture", "Performance Optimization"].map((tag) => (
                 <span
                   key={tag}
-                  className="px-4 py-2 bg-secondary/50 border border-border rounded-full text-sm text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
+                  className="px-4 py-2 bg-secondary border border-border rounded-lg text-sm text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
                 >
                   {tag}
                 </span>

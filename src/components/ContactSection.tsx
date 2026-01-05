@@ -64,26 +64,22 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      {/* Background Accents */}
-      <div className="absolute bottom-0 right-0 w-1/2 h-96 bg-primary/5 blur-3xl rounded-full" />
-      <div className="absolute top-1/4 left-0 w-64 h-64 bg-primary/10 blur-3xl rounded-full" />
-
+    <section id="contact" className="py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-6 relative">
         <div ref={ref} className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            className="inline-block text-primary font-mono text-sm mb-4"
+            className="inline-block text-primary font-medium text-sm mb-4 uppercase tracking-wide"
           >
-            {"<Contact />"}
+            Get in Touch
           </motion.span>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-bold mb-4 text-foreground"
           >
             Let's <span className="text-gradient">Connect</span>
           </motion.h2>
@@ -107,7 +103,7 @@ export const ContactSection = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Get in touch</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-foreground">Get in touch</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Whether you're looking for a data engineer to join your team, need consulting on a 
                 data infrastructure project, or just want to chat about the latest in data engineering, 
@@ -117,7 +113,7 @@ export const ContactSection = () => {
 
             {/* Location */}
             <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="p-3 rounded-lg bg-secondary/50 border border-border">
+              <div className="p-3 rounded-xl bg-secondary border border-border">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
@@ -136,10 +132,10 @@ export const ContactSection = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-gradient-card border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 group"
+                    className="p-4 rounded-xl bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 shadow-card"
                     aria-label={label}
                   >
-                    <Icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                    <Icon className="w-6 h-6" />
                   </a>
                 ))}
               </div>
@@ -148,7 +144,7 @@ export const ContactSection = () => {
             {/* Resume Download */}
             <Button
               size="lg"
-              className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90 glow-primary w-full sm:w-auto"
+              className="gap-2 w-full sm:w-auto glow-primary"
             >
               <Download className="w-4 h-4" />
               Download Resume
@@ -162,7 +158,7 @@ export const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="bg-gradient-card border border-border rounded-2xl p-6 space-y-5">
+              <div className="bg-card border border-border rounded-2xl p-6 space-y-5 shadow-card">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Name
@@ -173,7 +169,7 @@ export const ContactSection = () => {
                     placeholder="Your name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="bg-secondary/50 border-border focus:border-primary"
+                    className="bg-secondary border-border focus:border-primary"
                     maxLength={100}
                   />
                 </div>
@@ -188,7 +184,7 @@ export const ContactSection = () => {
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="bg-secondary/50 border-border focus:border-primary"
+                    className="bg-secondary border-border focus:border-primary"
                     maxLength={255}
                   />
                 </div>
@@ -202,7 +198,7 @@ export const ContactSection = () => {
                     placeholder="Tell me about your project or opportunity..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="bg-secondary/50 border-border focus:border-primary min-h-[150px] resize-none"
+                    className="bg-secondary border-border focus:border-primary min-h-[150px] resize-none"
                     maxLength={1000}
                   />
                   <div className="text-xs text-muted-foreground mt-1 text-right">
@@ -213,7 +209,7 @@ export const ContactSection = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="w-full gap-2"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (

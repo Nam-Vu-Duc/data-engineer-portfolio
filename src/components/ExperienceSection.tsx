@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 
 const experiences = [
   {
@@ -52,24 +52,24 @@ export const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-24 bg-card/30">
+    <section id="experience" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div ref={ref} className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            className="inline-block text-primary font-mono text-sm mb-4"
+            className="inline-block text-primary font-medium text-sm mb-4 uppercase tracking-wide"
           >
-            {"<Experience />"}
+            Career
           </motion.span>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-bold mb-4 text-foreground"
           >
-            Professional <span className="text-gradient">Journey</span>
+            Professional <span className="text-gradient">Experience</span>
           </motion.h2>
 
           <motion.p
@@ -99,7 +99,7 @@ export const ExperienceSection = () => {
             >
               {/* Timeline Dot */}
               <div
-                className={`absolute top-0 w-4 h-4 rounded-full bg-primary border-4 border-background left-0 md:left-1/2 -translate-x-1/2 z-10`}
+                className={`absolute top-0 w-4 h-4 rounded-full bg-primary border-4 border-background left-0 md:left-1/2 -translate-x-1/2 z-10 shadow-card`}
               />
 
               {/* Card */}
@@ -108,7 +108,7 @@ export const ExperienceSection = () => {
                   index % 2 === 0 ? "md:mr-12" : "md:ml-12"
                 }`}
               >
-                <div className="bg-gradient-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
+                <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 shadow-card hover:shadow-elevated">
                   {/* Header */}
                   <div className={`mb-4 ${index % 2 === 0 ? "md:text-right" : ""}`}>
                     <h3 className="text-xl font-semibold text-foreground mb-1">
@@ -141,7 +141,7 @@ export const ExperienceSection = () => {
                           index % 2 === 0 ? "md:flex-row-reverse" : ""
                         }`}
                       >
-                        <span className="text-primary mt-1">▸</span>
+                        <span className="text-primary mt-1">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
@@ -152,7 +152,7 @@ export const ExperienceSection = () => {
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2.5 py-1 bg-secondary/50 border border-border rounded-md text-xs text-muted-foreground"
+                        className="px-3 py-1 bg-secondary rounded-md text-xs text-muted-foreground"
                       >
                         {tech}
                       </span>
