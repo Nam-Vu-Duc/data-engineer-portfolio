@@ -8,23 +8,20 @@ export const HeroSection = () => {
       id="home"
       className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-hero"
     >
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-30">
         <div
-          className="absolute inset-0 animate-grid"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `
-              linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
+            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.15) 1px, transparent 0)`,
+            backgroundSize: "32px 32px",
           }}
         />
       </div>
 
-      {/* Floating Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-primary/10 blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
+      {/* Decorative Elements */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -33,7 +30,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-mono mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for opportunities
@@ -44,7 +41,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-foreground"
           >
             Hi, I'm{" "}
             <span className="text-gradient">Alex Chen</span>
@@ -57,35 +54,22 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             Building scalable data pipelines and cloud infrastructure that power
             data-driven decisions for millions of users.
           </motion.p>
 
-          {/* Code Snippet */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="inline-block bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 mb-10 font-mono text-sm text-left"
-          >
-            <span className="text-muted-foreground">{"// "}</span>
-            <span className="text-primary">Transforming</span>
-            <span className="text-foreground">{" raw data into "}</span>
-            <span className="text-primary">actionable insights</span>
-          </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary px-8"
+              className="px-8 glow-primary"
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
             >
               View My Projects
@@ -93,7 +77,6 @@ export const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-border hover:bg-secondary"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Get In Touch
@@ -104,7 +87,7 @@ export const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="flex justify-center gap-4"
           >
             {[
@@ -117,7 +100,7 @@ export const HeroSection = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-secondary/50 border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
+                className="p-3 rounded-xl bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 shadow-card"
                 aria-label={label}
               >
                 <Icon className="w-5 h-5" />
@@ -139,7 +122,7 @@ export const HeroSection = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="flex flex-col items-center gap-2 text-muted-foreground"
         >
-          <span className="text-xs font-mono">Scroll</span>
+          <span className="text-xs font-medium">Scroll</span>
           <ArrowDown className="w-4 h-4" />
         </motion.div>
       </motion.div>
