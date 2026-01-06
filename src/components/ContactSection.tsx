@@ -58,9 +58,9 @@ export const ContactSection = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:alex@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/Nam-Vu-Duc", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/nam-vu-duc/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:namvd.dev@gmail.com", label: "Email" },
   ];
 
   return (
@@ -122,7 +122,7 @@ export const ContactSection = () => {
               </div>
               <div>
                 <div className="text-foreground font-medium">Location</div>
-                <div className="text-sm">San Francisco, CA (Open to Remote)</div>
+                <div className="text-sm">Hoang Mai, Ha Noi</div>
               </div>
             </div>
 
@@ -149,6 +149,14 @@ export const ContactSection = () => {
             <Button
               size="lg"
               className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90 glow-primary w-full sm:w-auto"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/resume.pdf";
+                link.download = "resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               <Download className="w-4 h-4" />
               Download Resume

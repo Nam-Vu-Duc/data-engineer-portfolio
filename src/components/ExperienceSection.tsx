@@ -31,20 +31,7 @@ const experiences = [
       "Optimized SQL queries resulting in 5x performance improvement",
     ],
     technologies: ["Python", "SQL", "GCP", "BigQuery", "Dataflow"],
-  },
-  {
-    title: "Junior Data Engineer",
-    company: "Analytics Startup",
-    location: "Boston, MA",
-    period: "2017 - 2019",
-    description: "Early team member building foundational data infrastructure.",
-    achievements: [
-      "Developed first production data pipeline handling 1M+ events daily",
-      "Created data models supporting core business reporting needs",
-      "Automated data validation processes reducing manual effort by 80%",
-    ],
-    technologies: ["Python", "PostgreSQL", "Airflow", "Docker"],
-  },
+  }
 ];
 
 export const ExperienceSection = () => {

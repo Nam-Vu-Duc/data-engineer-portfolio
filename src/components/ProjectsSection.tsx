@@ -34,24 +34,13 @@ const projects = [
     category: "ml-ops",
     github: "https://github.com",
     demo: null,
-  },
-  {
-    title: "Streaming Analytics Platform",
-    description:
-      "Architected an end-to-end streaming analytics platform using Flink for real-time fraud detection, processing 500K transactions per minute with sub-second latency.",
-    technologies: ["Apache Flink", "Kafka", "Cassandra", "Grafana", "Java"],
-    metrics: ["500K TPS", "<1s latency", "99.7% accuracy"],
-    category: "real-time",
-    github: "https://github.com",
-    demo: "https://example.com",
-  },
+  }
 ];
 
 const categories = [
   { id: "all", label: "All Projects" },
-  { id: "real-time", label: "Real-time" },
-  { id: "warehouse", label: "Data Warehouse" },
-  { id: "ml-ops", label: "ML Ops" },
+  { id: "cloud", label: "Cloud" },
+  { id: "on-premise", label: "On Premise" }
 ];
 
 export const ProjectsSection = () => {

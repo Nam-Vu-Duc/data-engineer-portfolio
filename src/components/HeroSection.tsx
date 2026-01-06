@@ -47,7 +47,7 @@ export const HeroSection = () => {
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             Hi, I'm{" "}
-            <span className="text-gradient">Alex Chen</span>
+            <span className="text-gradient">Nam Vu</span>
             <br />
             <span className="text-muted-foreground">Data Engineer</span>
           </motion.h1>

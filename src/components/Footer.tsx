@@ -15,14 +15,14 @@ export const Footer = () => {
               <Terminal className="w-4 h-4 text-primary" />
             </div>
             <span className="font-semibold">
-              <span className="text-foreground">Alex</span>
+              <span className="text-foreground">Namvu</span>
               <span className="text-primary">.data</span>
             </span>
           </div>
 
           {/* Copyright */}
           <div className="text-sm text-muted-foreground text-center">
-            <span className="font-mono">© {new Date().getFullYear()}</span> Alex Chen. Built with passion for data.
+            <span className="font-mono">© {new Date().getFullYear()}</span>Nam Vu. Built with passion for data.
           </div>
 
           {/* Social & Scroll */}

@@ -6,33 +6,33 @@ const skillCategories = [
   {
     title: "Programming Languages",
     icon: "💻",
-    skills: ["Python", "SQL", "Java", "Scala", "Go", "Bash"],
+    skills: ["Python", "SQL", "Javascript"],
   },
   {
     title: "Big Data Technologies",
     icon: "⚡",
-    skills: ["Apache Spark", "Apache Kafka", "Hadoop", "Apache Flink", "Presto"],
+    skills: ["Spark", "Kafka", "Flink", "Airflow", "dbt"],
   },
   {
     title: "Cloud Platforms",
     icon: "☁️",
-    skills: ["AWS (S3, EC2, Lambda, Glue, Athena, Redshift)", "GCP (BigQuery, Dataflow, Pub/Sub)", "Azure (Data Factory, Synapse)"],
+    skills: ["AWS", "Azure", "Fabric", "Databricks", "Snowflake"],
   },
   {
     title: "Databases",
     icon: "🗄️",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "DynamoDB", "Redis"],
-  },
-  {
-    title: "Data Pipeline & Orchestration",
-    icon: "🔄",
-    skills: ["Apache Airflow", "Prefect", "Dagster", "dbt", "Luigi"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB"],
   },
   {
     title: "DevOps & Tools",
     icon: "🛠️",
-    skills: ["Git", "Docker", "Kubernetes", "Jenkins", "Terraform", "CI/CD"],
+    skills: ["Git", "Docker", "Terraform", "CI/CD"],
   },
+  {
+    title: "Visualization",
+    icon: "🛠️",
+    skills: ["Superset", "Tableau", "PowerBI"],
+  }
 ];
 
 export const SkillsSection = () => {

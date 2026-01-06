@@ -1,0 +1,115 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2500 >>
+stream
+BT
+/F1 24 Tf
+50 700 Td
+(NAMVU DATA ENGINEER) Tj
+0 -30 Td
+/F1 10 Tf
+(San Francisco, CA | 555-123-4567 | namvu@email.com | linkedin.com/in/namvu | github.com/namvu) Tj
+0 -25 Td
+/F1 14 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -15 Td
+/F1 10 Tf
+(Experienced Senior Data Engineer with 6+ years of expertise in designing and implementing large-scale) Tj
+0 -12 Td
+(data infrastructure. Proven track record of optimizing data pipelines, reducing costs by 45%, and leading) Tj
+0 -12 Td
+(cross-functional teams. Skilled in Spark, Kafka, AWS, and modern data stack tools.) Tj
+0 -25 Td
+/F1 14 Tf
+(PROFESSIONAL EXPERIENCE) Tj
+0 -15 Td
+/F1 11 Tf
+(Senior Data Engineer | TechCorp Inc. | San Francisco, CA | 2022 - Present) Tj
+0 -15 Td
+/F1 10 Tf
+(- Architected real-time data pipeline processing 50TB+ daily with 99.9% reliability) Tj
+0 -12 Td
+(- Reduced data processing costs by 45% through infrastructure optimization) Tj
+0 -12 Td
+(- Mentored team of 5 data engineers on best practices and system design) Tj
+0 -12 Td
+(- Led migration to cloud-native architecture on AWS, improving scalability 10x) Tj
+0 -20 Td
+/F1 11 Tf
+(Data Engineer | DataDriven Solutions | New York, NY | 2019 - 2022) Tj
+0 -15 Td
+/F1 10 Tf
+(- Designed ETL pipelines reducing data latency from hours to minutes) Tj
+0 -12 Td
+(- Implemented data quality framework catching 99% of data anomalies) Tj
+0 -12 Td
+(- Built self-service analytics platform used by 200+ business users) Tj
+0 -12 Td
+(- Optimized SQL queries resulting in 5x performance improvement) Tj
+0 -25 Td
+/F1 14 Tf
+(EDUCATION) Tj
+0 -15 Td
+/F1 11 Tf
+(Master of Science in Computer Science | University of California, Berkeley | 2019) Tj
+0 -12 Td
+/F1 10 Tf
+(Specialization: Data Systems and Machine Learning) Tj
+0 -20 Td
+/F1 11 Tf
+(Bachelor of Science in Information Technology | State University, Boston | 2017) Tj
+0 -12 Td
+/F1 10 Tf
+(Graduated Summa Cum Laude, Minor in Mathematics) Tj
+0 -25 Td
+/F1 14 Tf
+(CERTIFICATIONS) Tj
+0 -15 Td
+/F1 10 Tf
+(- AWS Certified Solutions Architect - Professional (2023)) Tj
+0 -12 Td
+(- Google Cloud Professional Data Engineer (2023)) Tj
+0 -12 Td
+(- Databricks Certified Associate Data Engineer (2022)) Tj
+0 -25 Td
+/F1 14 Tf
+(SKILLS) Tj
+0 -15 Td
+/F1 10 Tf
+(Languages: Python, SQL, Scala) Tj
+0 -12 Td
+(Big Data: Apache Spark, Kafka, Hadoop) Tj
+0 -12 Td
+(Cloud Platforms: AWS, Google Cloud Platform, Azure) Tj
+0 -12 Td
+(Data Tools: Airflow, dbt, BigQuery, Dataflow, Snowflake) Tj
+0 -12 Td
+(Databases: PostgreSQL, MongoDB, Cassandra) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000244 00000 n
+0000000333 00000 n
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2883
+%%EOF

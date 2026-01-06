@@ -7,8 +7,10 @@ const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Education", href: "#education" },
+  { name: "Certifications", href: "#certifications" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -39,7 +41,7 @@ export const Navbar = () => {
               <Terminal className="w-5 h-5 text-primary" />
             </div>
             <span className="font-semibold text-lg">
-              <span className="text-foreground">Alex</span>
+              <span className="text-foreground">Namvu</span>
               <span className="text-primary">.data</span>
             </span>
           </a>
@@ -56,7 +58,19 @@ export const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <Button variant="outline" size="sm" className="gap-2 border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="gap-2 border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/resume.pdf";
+                link.download = "resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="w-4 h-4" />
               Resume
             </Button>
@@ -95,7 +109,19 @@ export const Navbar = () => {
                   {item.name}
                 </motion.a>
               ))}
-              <Button variant="outline" className="w-full gap-2 border-primary/50 text-primary">
+              <Button 
+                variant="outline" 
+                className="w-full gap-2 border-primary/50 text-primary"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/resume.pdf";
+                  link.download = "resume.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  setIsOpen(false);
+                }}
+              >
                 <Download className="w-4 h-4" />
                 Download Resume
               </Button>
