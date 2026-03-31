@@ -1,0 +1,61 @@
+{
+  "certifications": [
+    {
+      "title": "AWS Certified Solutions Architect - Professional",
+      "issuer": "Amazon Web Services",
+      "date": "2023",
+      "credentialUrl": "https://aws.amazon.com/certification",
+      "category": "Cloud"
+    },
+    {
+      "title": "Google Cloud Professional Data Engineer",
+      "issuer": "Google Cloud",
+      "date": "2023",
+      "credentialUrl": "https://cloud.google.com/certification",
+      "category": "Cloud"
+    },
+    {
+      "title": "Databricks Certified Associate Data Engineer",
+      "issuer": "Databricks",
+      "date": "2022",
+      "credentialUrl": "https://www.databricks.com/learn/certification",
+      "category": "Big Data"
+    },
+    {
+      "title": "Apache Spark Developer Certification",
+      "issuer": "Linux Academy",
+      "date": "2022",
+      "credentialUrl": "https://www.linuxacademy.com",
+      "category": "Big Data"
+    },
+    {
+      "title": "Apache Spark Developer Certification",
+      "issuer": "Linux Academy",
+      "date": "2022",
+      "credentialUrl": "https://www.linuxacademy.com",
+      "category": "Big Data"
+    },
+    {
+      "title": "Apache Spark Developer Certification",
+      "issuer": "Linux Academy",
+      "date": "2022",
+      "credentialUrl": "https://www.linuxacademy.com",
+      "category": "Big Data"
+    },
+    {
+      "title": "Apache Spark Developer Certification",
+      "issuer": "Linux Academy",
+      "date": "2022",
+      "credentialUrl": "https://www.linuxacademy.com",
+      "category": "Big Data"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Employee of the Year",
+      "organization": "TechCorp Inc.",
+      "year": "2023",
+      "description": "Recognized for outstanding contributions to data infrastructure and team leadership"
+    }
+  ]
+}

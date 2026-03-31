@@ -2,35 +2,9 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import data from "@/data/data.json";
 
-const education = [
-  {
-    degree: "Master of Science in Computer Science",
-    school: "University of California",
-    location: "Berkeley, CA",
-    period: "2017 - 2019",
-    gpa: "3.8/4.0",
-    description: "Specialized in Data Systems and Machine Learning",
-    highlights: [
-      "Thesis: Distributed Stream Processing Systems for Real-Time Analytics",
-      "Dean's List all semesters",
-      "Relevant Coursework: Big Data Analytics, Machine Learning, Cloud Computing",
-    ],
-  },
-  {
-    degree: "Bachelor of Science in Information Technology",
-    school: "State University",
-    location: "Boston, MA",
-    period: "2013 - 2017",
-    gpa: "3.7/4.0",
-    description: "Minor in Mathematics and Database Systems",
-    highlights: [
-      "Graduated Summa Cum Laude",
-      "Presidential Scholarship recipient",
-      "Capstone Project: Real-time Data Analytics Platform",
-    ],
-  },
-];
+const education = data.education;
 
 export const EducationSection = () => {
   const ref = useRef(null);

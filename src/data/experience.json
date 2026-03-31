@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Data Engineer",
+    "company": "FPT Software",
+    "location": "Hanoi, Vietnam",
+    "period": "5/2025 - Present",
+    "description": "Design and implement scalable data solutions for global clients.",
+    "achievements": [
+      "Architected real-time data pipeline processing 50TB+ daily with 99.9% reliability",
+      "Reduced data processing costs by 45% through infrastructure optimization",
+      "Mentored team of 5 data engineers on best practices and system design",
+      "Led migration to cloud-native architecture on AWS, improving scalability 10x"
+    ],
+    "technologies": [
+      "Spark",
+      "Kafka",
+      "AWS",
+      "Airflow",
+      "dbt"
+    ]
+  },
+  {
+    "title": "Software Implementation",
+    "company": "Luklak",
+    "location": "Hanoi, Vietnam",
+    "period": "5/2024 - 12/2024",
+    "description": "Implemented software solutions and automation for SMEs to enhance business operations.",
+    "achievements": [
+      "Delivered customized software solutions for 10+ businesses across diverse industries by gathering, analyzing, and clarifying client requirements, optimized operations in areas such as CRM and HRM.",
+      "Designed and deployed automated workflows using n8n, and integrated Luklak with third-party platforms (e.g., Nhanh.vn, Sapo, Brevo), enabling seamless data exchange and reducing manual effort in daily operations.",
+      "Developed an automation solution for telesales reporting by aggregating raw data with Pandas, processing reports with Google Apps Script, and automating delivery via n8n. This reduced manual work by ~1 hour per day and improved reporting accuracy and timeliness."
+    ],
+    "technologies": [
+      "SQL",
+      "Pandas",
+      "CRM",
+      "Nocode - Lowcode",
+      "n8n"
+    ]
+  }
+]

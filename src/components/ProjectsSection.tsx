@@ -3,45 +3,10 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import data from "@/data/data.json";
 
-const projects = [
-  {
-    title: "Real-time Event Pipeline",
-    description:
-      "Designed and implemented a real-time ETL pipeline processing 10M+ events daily using Apache Kafka and Spark Streaming, reducing data latency from 2 hours to 5 minutes.",
-    technologies: ["Apache Kafka", "Spark Streaming", "AWS S3", "Python", "Docker"],
-    metrics: ["96% latency reduction", "10M+ events/day", "99.9% uptime"],
-    category: "real-time",
-    github: "https://github.com",
-    demo: null,
-  },
-  {
-    title: "Data Warehouse Modernization",
-    description:
-      "Led migration of legacy data warehouse to cloud-native solution on AWS Redshift with dimensional modeling, improving query performance by 5x and reducing costs by 40%.",
-    technologies: ["AWS Redshift", "dbt", "Airflow", "Python", "Terraform"],
-    metrics: ["5x query speed", "40% cost reduction", "50+ tables migrated"],
-    category: "warehouse",
-    github: "https://github.com",
-    demo: "https://example.com",
-  },
-  {
-    title: "ML Feature Store",
-    description:
-      "Built a centralized feature store serving real-time and batch features to 15+ ML models, enabling consistent feature computation and reducing model deployment time by 60%.",
-    technologies: ["Feast", "Redis", "BigQuery", "Kubernetes", "Python"],
-    metrics: ["15+ ML models served", "60% faster deployment", "100K+ features"],
-    category: "ml-ops",
-    github: "https://github.com",
-    demo: null,
-  }
-];
-
-const categories = [
-  { id: "all", label: "All Projects" },
-  { id: "cloud", label: "Cloud" },
-  { id: "on-premise", label: "On Premise" }
-];
+const projects = data.projects.projects;
+const categories = data.projects.categories;
 
 export const ProjectsSection = () => {
   const ref = useRef(null);

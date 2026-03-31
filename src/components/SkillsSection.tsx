@@ -1,39 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import data from "@/data/data.json";
 
-const skillCategories = [
-  {
-    title: "Programming Languages",
-    icon: "💻",
-    skills: ["Python", "SQL", "Javascript"],
-  },
-  {
-    title: "Big Data Technologies",
-    icon: "⚡",
-    skills: ["Spark", "Kafka", "Flink", "Airflow", "dbt"],
-  },
-  {
-    title: "Cloud Platforms",
-    icon: "☁️",
-    skills: ["AWS", "Azure", "Fabric", "Databricks", "Snowflake"],
-  },
-  {
-    title: "Databases",
-    icon: "🗄️",
-    skills: ["PostgreSQL", "MySQL", "MongoDB"],
-  },
-  {
-    title: "DevOps & Tools",
-    icon: "🛠️",
-    skills: ["Git", "Docker", "Terraform", "CI/CD"],
-  },
-  {
-    title: "Visualization",
-    icon: "🛠️",
-    skills: ["Superset", "Tableau", "PowerBI"],
-  }
-];
+const skillCategories = data.technicalSkills;
 
 export const SkillsSection = () => {
   const ref = useRef(null);
@@ -118,14 +88,13 @@ export const SkillsSection = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "ETL/ELT Pipeline Design",
+              "Pipeline Design",
               "Data Modeling",
+              "Data Governance",
               "System Architecture",
               "Performance Optimization",
               "Technical Communication",
-              "Cross-functional Collaboration",
               "Agile Methodologies",
-              "Documentation",
             ].map((skill) => (
               <span
                 key={skill}

@@ -1,0 +1,32 @@
+{
+  "highlights": [
+    {
+      "icon": "Database",
+      "label": "1+ Years",
+      "description": "Data Engineering"
+    },
+    {
+      "icon": "Cloud",
+      "label": "50+ Pipelines",
+      "description": "Built & Deployed"
+    },
+    {
+      "icon": "Zap",
+      "label": "10TB+",
+      "description": "Data Processed Daily"
+    },
+    {
+      "icon": "Users",
+      "label": "15+",
+      "description": "Cross-functional Teams"
+    }
+  ],
+  "tags": [
+    "ETL/ELT",
+    "SQL",
+    "Real-time Streaming",
+    "Data Modeling",
+    "Cloud Architecture",
+    "Performance Optimization"
+  ]
+}

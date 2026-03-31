@@ -2,13 +2,23 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Database, Cloud, Zap, Users } from "lucide-react";
+import data from "@/data/data.json";
 
-const highlights = [
-  { icon: Database, label: "1+ Years", description: "Data Engineering" },
-  { icon: Cloud, label: "50+ Pipelines", description: "Built & Deployed" },
-  { icon: Zap, label: "10TB+", description: "Data Processed Daily" },
-  { icon: Users, label: "15+", description: "Cross-functional Teams" },
-];
+const aboutData = data.summary;
+
+const iconMap: Record<string, typeof Database> = {
+  Database,
+  Cloud,
+  Zap,
+  Users,
+};
+
+const highlights = aboutData.highlights.map((h) => ({
+  ...h,
+  icon: iconMap[h.icon as keyof typeof iconMap],
+}));
+
+const tags = aboutData.tags;
 
 export const AboutSection = () => {
   const ref = useRef(null);
@@ -100,13 +110,13 @@ export const AboutSection = () => {
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I’m Nam – A Data Engineer with 1 year of hands-on experience designing and optimizing cloud-based data platforms on AWS, Microsoft Azure, and Fabric. Strong background in building scalable data pipelines with Apache Airflow and dbt, optimizing SQL performance, and implementing data governance for analytics and BI. Additionally, experienced in software development, low-code/no-code solutions, and Agile/Scrum project delivery. Also a former double major in Information Systems and Economics, I bring both technical and business perspectives to data engineering solutions.
+                I’m Nam – A Data Engineer with nearly 2 years of hands-on experience in designing and optimizing cloud-based data platforms on AWS, Microsoft Azure, and Fabric. Strong background in building scalable data pipelines with Apache Airflow and dbt, optimizing SQL performance, and implementing data governance for analytics and BI. Additionally, experienced in software development, low-code/no-code solutions, and Agile/Scrum project delivery. Also a former double major in Information Systems and Economics, I bring both technical and business perspectives to data engineering solutions.
               </p>
             </div>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-3 mt-8">
-              {["ETL/ELT", "Real-time Streaming", "Data Modeling", "Cloud Architecture", "Performance Optimization"].map((tag) => (
+              {tags.map((tag) => (
                 <span
                   key={tag}
                   className="px-4 py-2 bg-secondary/50 border border-border rounded-full text-sm text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"

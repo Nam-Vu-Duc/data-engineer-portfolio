@@ -3,67 +3,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award, Calendar, Trophy, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import data from "@/data/data.json";
 
-const certifications = [
-  {
-    title: "AWS Certified Solutions Architect - Professional",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    credentialUrl: "https://aws.amazon.com/certification",
-    category: "Cloud",
-  },
-  {
-    title: "Google Cloud Professional Data Engineer",
-    issuer: "Google Cloud",
-    date: "2023",
-    credentialUrl: "https://cloud.google.com/certification",
-    category: "Cloud",
-  },
-  {
-    title: "Databricks Certified Associate Data Engineer",
-    issuer: "Databricks",
-    date: "2022",
-    credentialUrl: "https://www.databricks.com/learn/certification",
-    category: "Big Data",
-  },
-  {
-    title: "Apache Spark Developer Certification",
-    issuer: "Linux Academy",
-    date: "2022",
-    credentialUrl: "https://www.linuxacademy.com",
-    category: "Big Data",
-  },
-  {
-    title: "Apache Spark Developer Certification",
-    issuer: "Linux Academy",
-    date: "2022",
-    credentialUrl: "https://www.linuxacademy.com",
-    category: "Big Data",
-  },
-  {
-    title: "Apache Spark Developer Certification",
-    issuer: "Linux Academy",
-    date: "2022",
-    credentialUrl: "https://www.linuxacademy.com",
-    category: "Big Data",
-  },
-  {
-    title: "Apache Spark Developer Certification",
-    issuer: "Linux Academy",
-    date: "2022",
-    credentialUrl: "https://www.linuxacademy.com",
-    category: "Big Data",
-  },
-];
-
-const awards = [
-  {
-    title: "Employee of the Year",
-    organization: "TechCorp Inc.",
-    year: "2023",
-    description: "Recognized for outstanding contributions to data infrastructure and team leadership",
-  }
-];
+const certifications = data.certifications.certifications;
+const awards = data.certifications.awards;
 
 export const CertificationsSection = () => {
   const ref = useRef(null);

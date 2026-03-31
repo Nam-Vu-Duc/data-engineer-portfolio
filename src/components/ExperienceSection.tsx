@@ -2,37 +2,9 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
+import data from "@/data/data.json";
 
-const experiences = [
-  {
-    title: "Senior Data Engineer",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
-    description: "Leading data infrastructure initiatives for a platform serving 10M+ users.",
-    achievements: [
-      "Architected real-time data pipeline processing 50TB+ daily with 99.9% reliability",
-      "Reduced data processing costs by 45% through infrastructure optimization",
-      "Mentored team of 5 data engineers on best practices and system design",
-      "Led migration to cloud-native architecture on AWS, improving scalability 10x",
-    ],
-    technologies: ["Spark", "Kafka", "AWS", "Airflow", "dbt"],
-  },
-  {
-    title: "Data Engineer",
-    company: "DataDriven Solutions",
-    location: "New York, NY",
-    period: "2019 - 2022",
-    description: "Built and maintained data pipelines for enterprise analytics platform.",
-    achievements: [
-      "Designed ETL pipelines reducing data latency from hours to minutes",
-      "Implemented data quality framework catching 99% of data anomalies",
-      "Built self-service analytics platform used by 200+ business users",
-      "Optimized SQL queries resulting in 5x performance improvement",
-    ],
-    technologies: ["Python", "SQL", "GCP", "BigQuery", "Dataflow"],
-  }
-];
+const experiences = data.experience;
 
 export const ExperienceSection = () => {
   const ref = useRef(null);

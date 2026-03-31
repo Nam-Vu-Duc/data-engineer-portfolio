@@ -6,6 +6,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import data from "@/data/data.json";
+
+const iconMap: Record<string, typeof Github> = {
+  Github,
+  Linkedin,
+  Mail,
+};
+
+const socialLinks = data.contact.socialLinks.map((link) => ({
+  ...link,
+  icon: iconMap[link.icon as keyof typeof iconMap],
+}));
 
 export const ContactSection = () => {
   const ref = useRef(null);
@@ -56,12 +68,6 @@ export const ContactSection = () => {
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
   };
-
-  const socialLinks = [
-    { icon: Github, href: "https://github.com/Nam-Vu-Duc", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/nam-vu-duc/", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:namvd.dev@gmail.com", label: "Email" },
-  ];
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
