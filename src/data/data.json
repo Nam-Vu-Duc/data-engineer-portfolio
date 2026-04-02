@@ -2,222 +2,294 @@
   "summary": {
     "highlights": [
       {
-        "icon": "Database",
-        "label": "1+ Years",
-        "description": "Data Engineering"
+        "icon": "",
+        "label": "",
+        "description": "1 year of hands-on experience designing and optimizing cloud-based data platforms on AWS, Microsoft Azure, and Fabric."
       },
       {
-        "icon": "Cloud",
-        "label": "50+ Pipelines",
-        "description": "Built & Deployed"
+        "icon": "",
+        "label": "",
+        "description": "Strong background in building scalable data pipelines with Apache Airflow and dbt, optimizing SQL performance, and implementing data governance for analytics and BI."
       },
       {
-        "icon": "Zap",
-        "label": "10TB+",
-        "description": "Data Processed Daily"
+        "icon": "",
+        "label": "",
+        "description": "Experienced in software development, low-code/no-code solutions, and Agile/Scrum project delivery."
       },
       {
-        "icon": "Users",
-        "label": "15+",
-        "description": "Cross-functional Teams"
+        "icon": "",
+        "label": "",
+        "description": "Former double major in Information Systems and Economics, bringing both technical and business perspectives to data engineering solutions."
       }
     ],
     "tags": [
-      "ETL/ELT",
-      "SQL",
-      "Real-time Streaming",
-      "Data Modeling",
-      "Cloud Architecture",
-      "Performance Optimization"
+      "Data Engineer",
+      "Cloud Data Platforms",
+      "AWS",
+      "Microsoft Azure",
+      "Fabric",
+      "Data Pipelines",
+      "Apache Airflow",
+      "dbt",
+      "SQL Performance Optimization",
+      "Data Governance",
+      "Analytics",
+      "BI",
+      "Software Development",
+      "Low-code/No-code",
+      "Agile/Scrum",
+      "Information Systems",
+      "Economics"
     ]
   },
   "technicalSkills": [
     {
-      "title": "Programming Languages",
-      "icon": "💻",
-      "skills": ["Python", "SQL", "Javascript"]
+      "title": "Big Data",
+      "icon": "",
+      "skills": [
+        "Kafka",
+        "Spark",
+        "Airflow",
+        "dbt"
+      ]
     },
     {
-      "title": "Big Data Technologies",
-      "icon": "⚡",
-      "skills": ["Spark", "Kafka", "Flink", "Airflow", "dbt"]
-    },
-    {
-      "title": "Cloud Platforms",
-      "icon": "☁️",
-      "skills": ["AWS", "Azure", "Fabric", "Databricks", "Snowflake"]
+      "title": "Cloud",
+      "icon": "",
+      "skills": [
+        "Azure",
+        "Fabric",
+        "GCP",
+        "AWS"
+      ]
     },
     {
       "title": "Databases",
-      "icon": "🗄️",
-      "skills": ["PostgreSQL", "MySQL", "MongoDB"]
+      "icon": "",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB"
+      ]
     },
     {
-      "title": "DevOps & Tools",
-      "icon": "🛠️",
-      "skills": ["Git", "Docker", "Terraform", "CI/CD"]
+      "title": "Languages",
+      "icon": "",
+      "skills": [
+        "Python",
+        "SQL",
+        "JavaScript"
+      ]
     },
     {
       "title": "Visualization",
-      "icon": "🛠️",
-      "skills": ["Superset", "Tableau", "PowerBI"]
+      "icon": "",
+      "skills": [
+        "PowerBI",
+        "Tableau",
+        "Superset"
+      ]
     }
   ],
   "softSkills": [
-    "Pipeline Design",
-    "Data Modeling",
+    "English Proficiency (TOEIC 850 LR, 320 SW)",
+    "Basic Chinese (H3)",
+    "Problem Solving & Critical Thinking",
+    "Communication & Collaboration",
+    "Adaptability & Continuous Learning",
+    "Data Platforms",
     "Data Governance",
-    "System Architecture",
-    "Performance Optimization",
-    "Technical Communication",
-    "Agile Methodologies"
+    "Data Quality",
+    "Documentation & Knowledge Sharing"
   ],
   "experience": [
     {
-      "title": "Data Engineer",
-      "company": "FPT Software",
-      "location": "Hanoi, Vietnam",
+      "title": "DATA ENGINEER",
+      "company": "FPT SOFTWARE",
+      "location": "",
       "period": "5/2025 - Present",
-      "description": "Design and implement scalable data solutions for global clients.",
+      "description": "FPT Software is a leading global IT services provider in Vietnam, specializing in digital transformation, software development, and outsourcing across various industries.",
       "achievements": [
-        "Architected real-time data pipeline processing 50TB+ daily with 99.9% reliability",
-        "Reduced data processing costs by 45% through infrastructure optimization",
-        "Mentored team of 5 data engineers on best practices and system design",
-        "Led migration to cloud-native architecture on AWS, improving scalability 10x"
+        "Supported designing data ingestion mechanisms to connect hospital systems through Azure Data Factory connectors and FHIR APIs via Azure Event Hubs, landing all raw data into Azure Data Lake to ensure immutable storage, traceability, and downstream processing.",
+        "Orchestrated data workflows using Fabric Data Pipelines, fault-tolerant with retries, fallback, and schema evolution through pre-validation configuration tables, monitoring with pipeline run notifications integrated into Microsoft Teams.",
+        "Implemented big data transformations using Spark for distributed processing, converting raw AS-IS data into standardized raw layers, and dbt with fully supported API to build Silver and Gold layers for data modeling, aggregation, and data quality validation.",
+        "Additionally supported the development of AI mapping engine, a tool automatically mapping between heterogeneous schemas, significantly reducing manual schema mapping effort through AI-assisted suggestions.",
+        "Delivered operational and analytical healthcare insights, pipeline monitoring and data quality through Power BI dashboards.",
+        "Exposed FHIR APIs to enable external system integrations and support healthcare interoperability requirements.",
+        "Supported integrating dbt with DataHub to enhance data governance capabilities, centralized data cataloging, data quality monitoring, and end-to-end data lineage tracking across the healthcare data platform."
       ],
-      "technologies": ["Spark", "Kafka", "AWS", "Airflow", "dbt"]
+      "technologies": [
+        "Azure Data Factory",
+        "FHIR APIs",
+        "Azure Event Hubs",
+        "Azure Data Lake",
+        "Fabric Data Pipelines",
+        "Microsoft Teams",
+        "Spark",
+        "dbt",
+        "Power BI",
+        "DataHub"
+      ]
     },
     {
-      "title": "Software Implementation",
-      "company": "Luklak",
-      "location": "Hanoi, Vietnam",
+      "title": "SOFTWARE IMPLEMENTATION",
+      "company": "LUKLAK",
+      "location": "",
       "period": "5/2024 - 12/2024",
-      "description": "Implemented software solutions and automation for SMEs to enhance business operations.",
+      "description": "Luklak is a next-generation unified & universal enterprise application platform that integrates diverse and specialized business functions into a single system.",
       "achievements": [
         "Delivered customized software solutions for 10+ businesses across diverse industries by gathering, analyzing, and clarifying client requirements, optimized operations in areas such as CRM and HRM.",
         "Designed and deployed automated workflows using n8n, and integrated Luklak with third-party platforms (e.g., Nhanh.vn, Sapo, Brevo), enabling seamless data exchange and reducing manual effort in daily operations.",
         "Developed an automation solution for telesales reporting by aggregating raw data with Pandas, processing reports with Google Apps Script, and automating delivery via n8n. This reduced manual work by ~1 hour per day and improved reporting accuracy and timeliness."
       ],
-      "technologies": ["SQL", "Pandas", "CRM", "Nocode - Lowcode", "n8n"]
+      "technologies": [
+        "n8n",
+        "Nhanh.vn",
+        "Sapo",
+        "Brevo",
+        "Pandas",
+        "Google Apps Script"
+      ]
     }
   ],
   "projects": {
     "projects": [
       {
-        "title": "Fabric Data Platform for BEAUTÉ Cosmetics",
-        "description": "Designed and implemented a fully cloud-based data platform using Microsoft Fabric with Lambda Architecture to support real-time and batch analytics.",
-        "technologies": ["Apache Kafka", "Spark Streaming", "AWS S3", "Python", "Docker"],
-        "metrics": ["96% latency reduction", "10M+ events/day", "99.9% uptime"],
-        "category": "real-time",
-        "github": "https://github.com",
-        "demo": null
-      },
-      {
-        "title": "Data Warehouse Modernization",
-        "description": "Led migration of legacy data warehouse to cloud-native solution on AWS Redshift with dimensional modeling, improving query performance by 5x and reducing costs by 40%.",
-        "technologies": ["AWS Redshift", "dbt", "Airflow", "Python", "Terraform"],
-        "metrics": ["5x query speed", "40% cost reduction", "50+ tables migrated"],
-        "category": "warehouse",
-        "github": "https://github.com",
-        "demo": "https://example.com"
+        "title": "Fabric Data Platform for BEAUT? Cosmetic",
+        "description": "Fabric-based data platform using Lambda Architecture for e-commerce operations, enabling fraud detection, user behavior monitoring, and intelligent customer experience features.",
+        "technologies": [
+          "MongoDB CDC connector",
+          "Fabric Eventstream",
+          "Fabric Eventhouse",
+          "KQL",
+          "Fabric Data Pipelines",
+          "Fabric Activator",
+          "Spark",
+          "Medallion Architecture",
+          "WebSocket",
+          "Chart.js",
+          "RAG techniques",
+          "Great Expectations"
+        ],
+        "metrics": [],
+        "category": "Data Platform",
+        "github": "",
+        "demo": ""
       }
     ],
     "categories": [
       {
-        "id": "all",
-        "label": "All Projects"
-      },
-      {
-        "id": "cloud",
-        "label": "Cloud"
-      },
-      {
-        "id": "on-premise",
-        "label": "On Premise"
+        "id": "data-platform",
+        "label": "Data Platform"
       }
     ]
   },
   "education": [
     {
-      "degree": "Bachelor of Management Information Systems",
-      "school": "National Economics University",
-      "location": "Hanoi, Vietnam",
-      "period": "2022 - 2025",
-      "gpa": "3.7/4.0",
-      "description": "Focused on data engineering, data analysis, and information systems management.",
+      "degree": "Master of Data Science",
+      "school": "Hanoi University of Science and Technology (HUST)",
+      "location": "",
+      "period": "2026 - Present",
+      "gpa": "3.76/4",
+      "description": "",
       "highlights": [
-        "Thesis: Lambda Architecture for Ecommerce Data Processing",
-        "Relevant: Python, SQL, DS&A, Operating Systems, Data Modeling, AI in Business, etc"
+        "Maths",
+        "Probability Statistics",
+        "Creativity",
+        "Innovation",
+        "Micro-macro economics"
+      ]
+    },
+    {
+      "degree": "Bachelor of Management Information Systems",
+      "school": "National Economics University (NEU)",
+      "location": "",
+      "period": "2022 - 2025",
+      "gpa": "3.70/4",
+      "description": "",
+      "highlights": [
+        "Python",
+        "SQL",
+        "DS&A",
+        "Operating Systems",
+        "Data Modeling",
+        "AI in Business"
       ]
     },
     {
       "degree": "Bachelor of Economics Management",
-      "school": "National Economics University",
-      "location": "Hanoi, Vietnam",
+      "school": "National Economics University (NEU)",
+      "location": "",
       "period": "2021 - 2024",
-      "gpa": "3.76/4.0",
-      "description": "Emphasized on economic theories, business management.",
-      "highlights": ["Graduated Summa Cum Laude"]
+      "gpa": "3.76/4",
+      "description": "",
+      "highlights": [
+        "Maths",
+        "Probability Statistics",
+        "Creativity",
+        "Innovation",
+        "Micro-macro economics"
+      ]
     }
   ],
   "certifications": {
     "certifications": [
       {
-        "title": "AWS Certified Solutions Architect - Professional",
-        "issuer": "Amazon Web Services",
-        "date": "2023",
-        "credentialUrl": "https://aws.amazon.com/certification",
-        "category": "Cloud"
+        "title": "Microsoft Fabric Data Engineer",
+        "issuer": "Microsoft",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Data Engineering"
       },
       {
-        "title": "Google Cloud Professional Data Engineer",
-        "issuer": "Google Cloud",
-        "date": "2023",
-        "credentialUrl": "https://cloud.google.com/certification",
-        "category": "Cloud"
+        "title": "Google Data Engineer",
+        "issuer": "Google",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Data Engineering"
       },
       {
-        "title": "Databricks Certified Associate Data Engineer",
-        "issuer": "Databricks",
-        "date": "2022",
-        "credentialUrl": "https://www.databricks.com/learn/certification",
-        "category": "Big Data"
+        "title": "DataCamp Data Engineer",
+        "issuer": "DataCamp",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Data Engineering"
       },
       {
-        "title": "Apache Spark Developer Certification",
-        "issuer": "Linux Academy",
-        "date": "2022",
-        "credentialUrl": "https://www.linuxacademy.com",
-        "category": "Big Data"
+        "title": "Google Data Analytics",
+        "issuer": "Google",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Data Analytics"
       },
       {
-        "title": "Apache Spark Developer Certification",
-        "issuer": "Linux Academy",
-        "date": "2022",
-        "credentialUrl": "https://www.linuxacademy.com",
-        "category": "Big Data"
+        "title": "Microsoft Office Specialist",
+        "issuer": "Microsoft",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Productivity"
       },
       {
-        "title": "Apache Spark Developer Certification",
-        "issuer": "Linux Academy",
-        "date": "2022",
-        "credentialUrl": "https://www.linuxacademy.com",
-        "category": "Big Data"
+        "title": "TOEIC (850 LR & 320 SW)",
+        "issuer": "ETS",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Language"
       },
       {
-        "title": "Apache Spark Developer Certification",
-        "issuer": "Linux Academy",
-        "date": "2022",
-        "credentialUrl": "https://www.linuxacademy.com",
-        "category": "Big Data"
+        "title": "Chinese HSK3",
+        "issuer": "Hanban",
+        "date": "",
+        "credentialUrl": "",
+        "category": "Language"
       }
     ],
     "awards": [
       {
-        "title": "Employee of the Year",
-        "organization": "TechCorp Inc.",
-        "year": "2023",
-        "description": "Recognized for outstanding contributions to data infrastructure and team leadership"
+        "title": "Second Prize, FPT Data Hackathon",
+        "organization": "FPT",
+        "year": "2025",
+        "description": "Awarded for the Fabric Data Platform for BEAUT? Cosmetic project."
       }
     ]
   },
@@ -225,18 +297,18 @@
     "socialLinks": [
       {
         "icon": "Github",
-        "href": "https://github.com/Nam-Vu-Duc",
-        "label": "GitHub"
+        "href": "",
+        "label": "Github"
       },
       {
         "icon": "Linkedin",
-        "href": "https://www.linkedin.com/in/nam-vu-duc/",
-        "label": "LinkedIn"
+        "href": "",
+        "label": "Linkedin"
       },
       {
-        "icon": "Mail",
-        "href": "mailto:namvd.dev@gmail.com",
-        "label": "Email"
+        "icon": "Portfolio",
+        "href": "",
+        "label": "Portfolio"
       }
     ]
   }
