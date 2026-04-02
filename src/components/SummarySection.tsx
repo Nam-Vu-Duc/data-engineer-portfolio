@@ -16,13 +16,13 @@ export const SummarySection = () => {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
       
       <div className="container mx-auto px-6">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
+        <div ref={ref} className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Left: Image & Stats */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative lg:col-span-2"
           >
             {/* Profile Image Container */}
             <div className="relative max-w-md mx-auto lg:mx-0">
@@ -60,7 +60,7 @@ export const SummarySection = () => {
               </div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="grid grid-cols-2 gap-4 mt-4">
                 {[
                   { icon: Database, label: "1+ Years", description: "Data Engineering" },
                   { icon: Cloud, label: "50+ Pipelines", description: "Built & Deployed" },
@@ -88,6 +88,7 @@ export const SummarySection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-3"
           >
             <span className="inline-block text-primary font-mono text-sm mb-4">
               {"<Summary />"}

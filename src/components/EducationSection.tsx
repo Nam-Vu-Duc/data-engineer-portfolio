@@ -80,14 +80,15 @@ export const EducationSection = () => {
 
                 <p className="text-muted-foreground mb-4">{edu.description}</p>
 
-                <ul className="space-y-2">
+                <div className="text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">Highlights: </span>
                   {edu.highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="text-primary mt-1">▸</span>
+                    <span key={i}>
+                      {i > 0 && <span className="mx-2">•</span>}
                       {highlight}
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             </motion.div>
           ))}

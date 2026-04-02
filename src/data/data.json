@@ -155,7 +155,7 @@
   "projects": {
     "projects": [
       {
-        "title": "Fabric Data Platform for BEAUT? Cosmetic",
+        "title": "Fabric Data Platform for BEAUTE Cosmetic",
         "description": "Fabric-based data platform using Lambda Architecture for e-commerce operations, enabling fraud detection, user behavior monitoring, and intelligent customer experience features.",
         "technologies": [
           "MongoDB CDC connector",
@@ -289,7 +289,7 @@
         "title": "Second Prize, FPT Data Hackathon",
         "organization": "FPT",
         "year": "2025",
-        "description": "Awarded for the Fabric Data Platform for BEAUT? Cosmetic project."
+        "description": "Awarded for the Fabric Data Platform for BEAUTE Cosmetic project."
       }
     ]
   },

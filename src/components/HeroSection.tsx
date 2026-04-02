@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-hero"
+      className="min-h-screen pt-20 relative flex items-center justify-center overflow-hidden bg-gradient-hero"
     >
       {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-20">
@@ -33,7 +33,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-mono mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-mono mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for opportunities
@@ -68,7 +68,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="inline-block bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 mb-10 font-mono text-sm text-left"
+            className="inline-block bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 mb-8 font-mono text-sm text-left"
           >
             <span className="text-muted-foreground">{"// "}</span>
             <span className="text-primary">Transforming</span>
@@ -86,7 +86,7 @@ export const HeroSection = () => {
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary px-8"
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("highlight-projects")?.scrollIntoView({ behavior: "smooth" })}
             >
               View My Projects
             </Button>
@@ -105,7 +105,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex justify-center gap-4"
+            className="flex justify-center gap-4 mb-24"
           >
             {[
               { icon: Github, href: "https://github.com/Nam-Vu-Duc", label: "GitHub" },

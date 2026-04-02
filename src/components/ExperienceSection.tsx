@@ -1,128 +1,151 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { Briefcase, MapPin, Calendar } from "lucide-react";
+import { useRef, useState } from "react";
+import { Briefcase, MapPin, Calendar, ChevronRight } from "lucide-react";
 import data from "@/data/data.json";
+import { DetailModal, type DetailItem } from "./DetailModal";
 
 const experiences = data.experience;
 
 export const ExperienceSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [selectedExp, setSelectedExp] = useState<DetailItem | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleExpClick = (exp: typeof experiences[0]) => {
+    setSelectedExp({
+      title: exp.title,
+      company: exp.company,
+      description: exp.description,
+      dateRange: exp.period,
+      achievements: exp.achievements,
+      technologies: exp.technologies,
+    });
+    setIsModalOpen(true);
+  };
 
   return (
-    <section id="experience" className="py-24 bg-card/30">
-      <div className="container mx-auto px-6">
-        <div ref={ref} className="text-center mb-16">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            className="inline-block text-primary font-mono text-sm mb-4"
-          >
-            {"<Experience />"}
-          </motion.span>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
-          >
-            Professional <span className="text-gradient">Journey</span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2 }}
-            className="text-muted-foreground text-lg max-w-2xl mx-auto"
-          >
-            Building data infrastructure at scale across industries
-          </motion.p>
-        </div>
-
-        {/* Timeline */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
-
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.company}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className={`relative mb-12 md:mb-16 ${
-                index % 2 === 0 ? "md:pr-1/2 md:text-right" : "md:pl-1/2 md:ml-auto"
-              }`}
+    <>
+      <section id="experience" className="py-24 bg-card/30">
+        <div className="container mx-auto px-6">
+          <div ref={ref} className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              className="inline-block text-primary font-mono text-sm mb-4"
             >
-              {/* Timeline Dot */}
-              <div
-                className={`absolute top-0 w-4 h-4 rounded-full bg-primary border-4 border-background left-0 md:left-1/2 -translate-x-1/2 z-10`}
-              />
+              {"<Experience />"}
+            </motion.span>
 
-              {/* Card */}
-              <div
-                className={`ml-8 md:ml-0 ${
-                  index % 2 === 0 ? "md:mr-12" : "md:ml-12"
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold mb-4"
+            >
+              Professional <span className="text-gradient">Journey</span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="text-muted-foreground text-lg max-w-2xl mx-auto"
+            >
+              Building data infrastructure at scale across industries
+            </motion.p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Timeline Line */}
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
+
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={exp.company}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                className={`relative mb-12 md:mb-16 ${
+                  index % 2 === 0 ? "md:pr-1/2 md:text-right" : "md:pl-1/2 md:ml-auto"
                 }`}
               >
-                <div className="bg-gradient-card border border-border rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
-                  {/* Header */}
-                  <div className={`mb-4 ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                    <h3 className="text-xl font-semibold text-foreground mb-1">
-                      {exp.title}
-                    </h3>
-                    <div className="text-primary font-medium">{exp.company}</div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mt-2 flex-wrap">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3.5 h-3.5" />
-                        {exp.location}
-                      </span>
+                {/* Timeline Dot */}
+                <div
+                  className={`absolute top-0 w-4 h-4 rounded-full bg-primary border-4 border-background left-0 md:left-1/2 -translate-x-1/2 z-10`}
+                />
+
+                {/* Card */}
+                <div
+                  className={`ml-8 md:ml-0 ${
+                    index % 2 === 0 ? "md:mr-12" : "md:ml-12"
+                  }`}
+                >
+                  <button
+                    onClick={() => handleExpClick(exp)}
+                    className="w-full text-left bg-gradient-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:shadow-lg hover:shadow-primary/10"
+                  >
+                    {/* Header */}
+                    <div className={`mb-3 flex justify-between items-start ${index % 2 === 0 ? "md:text-right" : ""}`}>
+                      <div className={index % 2 === 0 ? "md:text-right md:flex-1" : ""}>
+                        <h3 className="text-xl font-semibold text-foreground mb-1">
+                          {exp.title}
+                        </h3>
+                        <div className="text-primary font-medium">{exp.company}</div>
+                      </div>
+                      <ChevronRight className="w-5 h-5 text-primary/60 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </div>
+
+                    {/* Meta Info */}
+                    <div className={`flex items-center gap-4 text-sm text-muted-foreground mb-3 flex-wrap ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         {exp.period}
                       </span>
                     </div>
-                  </div>
 
-                  {/* Description */}
-                  <p className={`text-muted-foreground mb-4 ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                    {exp.description}
-                  </p>
+                    {/* Brief Description */}
+                    <p className={`text-muted-foreground text-sm leading-relaxed ${index % 2 === 0 ? "md:text-right" : ""}`}>
+                      {exp.description}
+                    </p>
 
-                  {/* Achievements */}
-                  <ul className={`space-y-2 mb-4 ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                    {exp.achievements.map((achievement, i) => (
-                      <li
-                        key={i}
-                        className={`text-sm text-muted-foreground flex items-start gap-2 ${
-                          index % 2 === 0 ? "md:flex-row-reverse" : ""
-                        }`}
-                      >
-                        <span className="text-primary mt-1">▸</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    {/* Quick Tech Preview */}
+                    <div className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                      {exp.technologies.slice(0, 3).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 bg-secondary/50 border border-border rounded-md text-xs text-muted-foreground"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {exp.technologies.length > 3 && (
+                        <span className="px-2.5 py-1 text-xs text-muted-foreground">
+                          +{exp.technologies.length - 3} more
+                        </span>
+                      )}
+                    </div>
 
-                  {/* Technologies */}
-                  <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                    {exp.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2.5 py-1 bg-secondary/50 border border-border rounded-md text-xs text-muted-foreground"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                    <div className={`text-xs text-primary/60 mt-3 font-medium ${index % 2 === 0 ? "md:text-right" : ""}`}>
+                      Click to view details →
+                    </div>
+                  </button>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <DetailModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        item={selectedExp}
+        type="experience"
+      />
+    </>
   );
 };
+

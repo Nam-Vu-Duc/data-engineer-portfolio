@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Github, Linkedin, Mail, MapPin, Download } from "lucide-react";
+import { Send, Github, Linkedin, Mail, MapPin, Download, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,6 +12,7 @@ const iconMap: Record<string, typeof Github> = {
   Github,
   Linkedin,
   Mail,
+  Portfolio: Globe,
 };
 
 const socialLinks = data.contact.socialLinks.map((link) => ({
@@ -150,23 +151,6 @@ export const ContactSection = () => {
                 ))}
               </div>
             </div>
-
-            {/* Resume Download */}
-            <Button
-              size="lg"
-              className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90 glow-primary w-full sm:w-auto"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/resume.pdf";
-                link.download = "resume.pdf";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
-            </Button>
           </motion.div>
 
           {/* Contact Form */}

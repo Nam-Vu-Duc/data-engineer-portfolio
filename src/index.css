@@ -12,6 +12,57 @@
 
 @layer base {
   :root {
+    /* Default: Light Mode */
+    --background: 210 30% 98%;
+    --foreground: 220 20% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 8%;
+
+    --primary: 177 70% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 92%;
+    --secondary-foreground: 220 20% 8%;
+
+    --muted: 220 20% 85%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 177 70% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 93%;
+    --ring: 177 70% 48%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(177 70% 48%) 0%, hsl(200 80% 48%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(210 30% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 30% 97%) 100%);
+    --glow-primary: 0 0 40px hsl(177 70% 48% / 0.15);
+    --glow-strong: 0 0 60px hsl(177 70% 48% / 0.2);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.06);
+
+    /* Sidebar tokens */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 8%;
+    --sidebar-primary: 177 70% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 92%;
+    --sidebar-accent-foreground: 220 20% 8%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 177 70% 48%;
+  }
+
+  html.dark {
     --background: 220 20% 6%;
     --foreground: 210 40% 98%;
 
@@ -39,8 +90,6 @@
     --border: 220 15% 20%;
     --input: 220 15% 20%;
     --ring: 177 70% 50%;
-
-    --radius: 0.75rem;
 
     /* Custom design tokens */
     --gradient-primary: linear-gradient(135deg, hsl(177 70% 50%) 0%, hsl(200 80% 50%) 100%);

@@ -165,6 +165,7 @@ export const HighlightProjectsSection = () => {
             variant="outline"
             size="lg"
             className="gap-2 border-border hover:border-primary/50 hover:bg-secondary"
+            onClick={() => window.open("https://github.com/Nam-Vu-Duc", "_blank")}
           >
             <Github className="w-4 h-4" />
             View All on GitHub
